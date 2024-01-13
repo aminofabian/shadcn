@@ -9,6 +9,7 @@ function MyDialog() {
     <div>
     <Dialog>
     <DialogTrigger>
+    Open
     </DialogTrigger>
     <DialogContent>
     Only My Content
