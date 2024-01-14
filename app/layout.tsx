@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { ShadCNThemeProvider } from '@/providers/shadCNProvider/shadCNProvider';
 import NavBar from '@/components/NavBar';
+import FooterBar from '@/components/FooterBar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,15 +19,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NavBar />
+    <body className={inter.className}>
     <ShadCNThemeProvider
     attribute="class"
     defaultTheme="system"
     enableSystem
     disableTransitionOnChange
     >
+    <div>
+    <NavBar />
+    </div>
+    
     {children}
+    <FooterBar />
     </ShadCNThemeProvider>
     </body>
     </html>
